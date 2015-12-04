@@ -52,12 +52,14 @@ public class Human implements Comparable<Human> {
     @Override
     public String toString() {
 	StringBuilder stringBuilder = new StringBuilder();
-	stringBuilder.append(name.toString());
-	stringBuilder.append(" ");
-	stringBuilder.append(Integer.toString(document.getNumber()));
-	stringBuilder.append(" ");
+	stringBuilder.append(name);
+	stringBuilder.append("/");
+	stringBuilder.append(document.getNumber());
+	stringBuilder.append("/");
 	stringBuilder.append(date.day);
+	stringBuilder.append(".");
 	stringBuilder.append(date.month);
+	stringBuilder.append(".");
 	stringBuilder.append(date.year);
 	return stringBuilder.toString();
     }
